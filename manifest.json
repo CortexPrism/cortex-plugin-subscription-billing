@@ -1,0 +1,34 @@
+{
+  "name": "cortex-plugin-subscription-billing",
+  "version": "1.0.0",
+  "description": "Subscription Billing Lifecycle Manager — Stripe Billing/Chargebee/Recurly for plans, trials, dunning, and churn analysis",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-subscription-billing",
+  "homepage": "https://cortexprism.io/marketplace/plugins/subscription-billing",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "sub_billing_create_plan", "description": "Create subscription plan", "params": [] },
+    {
+      "name": "sub_billing_manage_trial",
+      "description": "Manage trial periods and conversions",
+      "params": []
+    },
+    {
+      "name": "sub_billing_dunning",
+      "description": "Handle failed payment recovery",
+      "params": []
+    },
+    {
+      "name": "sub_billing_churn_analysis",
+      "description": "Analyze churn and predict LTV",
+      "params": []
+    }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
